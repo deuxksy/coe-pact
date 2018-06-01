@@ -1,0 +1,67 @@
+{
+  "consumer": {
+    "name": "order-service"
+  },
+  "provider": {
+    "name": "customer-service"
+  },
+  "interactions": [
+    {
+      "description": "a request for customers",
+      "providerState": "Get All Customers",
+      "request": {
+        "method": "get",
+        "path": "/api/v1/customers",
+        "query": ""
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": [
+          {
+            "customerId": 1,
+            "name": "Adam",
+            "email": "adam@boot.com"
+          },
+          {
+            "customerId": 2,
+            "name": "John",
+            "email": "john@boot.com"
+          },
+          {
+            "customerId": 3,
+            "name": "Smith",
+            "email": "smith@boot.com"
+          },
+          {
+            "customerId": 4,
+            "name": "Edgar",
+            "email": "edgar@boot.com"
+          },
+          {
+            "customerId": 5,
+            "name": "Martin",
+            "email": "martin@boot.com"
+          },
+          {
+            "customerId": 6,
+            "name": "Tom",
+            "email": "tom@boot.com"
+          },
+          {
+            "customerId": 7,
+            "name": "Sean",
+            "email": "sean@boot.com"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
